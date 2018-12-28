@@ -1,0 +1,18 @@
+
+.page_button{
+  width:98%;
+  margin-left:1%;
+  margin-top:30rpx;
+  background-color: #1571FA;
+  color:white;
+  height:150rpx;
+  text-align: center;
+  line-height: 150rpx;
+  border-radius: 30rpx;  
+}
+.new_note{
+  background-color: green;
+}
+.show_list{
+  background-color: yellowgreen;
+}

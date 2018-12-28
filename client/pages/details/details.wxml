@@ -1,0 +1,9 @@
+<view class='page'>
+    <view class='form-box'>
+      <form bindsubmit="submit">
+        <input class='title-input' name="title" value='{{name}}'/>
+        <textarea class='content-input' name="content"  value='{{content}}'/>
+        <button class='form-button' form-type="submit"> 修 改 </button>
+      </form>
+    </view>
+</view>

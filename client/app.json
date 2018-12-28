@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/newnote/newnote",
+    "pages/details/details"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1571FA",
+    "navigationBarTitleText": "云笔记",
+    "navigationBarTextStyle":"white"
+  }
+}
