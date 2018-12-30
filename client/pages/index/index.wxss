@@ -11,8 +11,8 @@
   border-radius: 30rpx;  
 }
 .new_note{
-  background-color: green;
+  background-color: blue;
 }
 .show_list{
-  background-color: yellowgreen;
+  background-color: purple;
 }

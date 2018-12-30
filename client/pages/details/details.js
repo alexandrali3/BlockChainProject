@@ -5,7 +5,7 @@ Page({
 	submit: function (e) {
 		var content = e.detail.value.content;
 		var name = e.detail.value.title;
-		var sqlid=this.data.sqlid;
+	    var id=this.data.id;
 		app.showLoading(1000);
 		wx.request({
 			url: app.globalData.api + 'updateNote',
@@ -13,18 +13,13 @@ Page({
 				id: app.globalData.userInfo.nickName,
 				name: e.detail.value.title,
 				content:e.detail.value.content,
-				sqlid: this.data.sqlid
+				id: this.data.id
 			},
 			success:function(res){
-				if (res.data.changedRows){
+				if (res.data){
 					wx.showModal({
 						title: '提示',
-						content: '修改成功！是否查看列表？',
-						success: function (res) {
-							wx.redirectTo({
-								url: '../list/list'
-							})
-						}
+						content: '修改成功！',
 					})
 				} else {
 					app.showModal('修改失败！')
@@ -34,13 +29,13 @@ Page({
 	},
 	onLoad:function(options){
 		this.setData({
-			sqlid: options.sqlid,//第二个是数据库id
+			id: options.id,
 		})
 		app.showLoading(1000);
 		wx.request({
 			url: app.globalData.api + 'getNote',
 			data:{
-				id: app.globalData.userInfo.nickName,//两个id 第一个是昵称 以太坊使用 
+				id: app.globalData.userInfo.nickName,
 				name:options.name
 			},
 			success:(res)=>{

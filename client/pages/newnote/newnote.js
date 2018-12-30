@@ -27,19 +27,13 @@ Page({
         },
 
         success:(res)=>{
-
-          if(res.data.insertId){
+          if(res.data){
             wx.showModal({
               title: '提示',
-              content: '添加成功！是否查看列表？',
-              success: function (res) {
-								wx.redirectTo({
-                  url: '../list/list'
-                })
-              }
+              content: '添加成功！'
             })
           }else{
-						app.showModal('添加失败！')
+			app.showModal('添加失败！')
           }
         }
       })

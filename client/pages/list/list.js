@@ -46,9 +46,10 @@ Page({
       },
       success:(res)=>{
 				var data=res.data;
+                /*
 				for(var i in data){
 					data[i]['text']='状态';
-				}
+				}*/
 				this.setData({
 					noteList:data
 				})

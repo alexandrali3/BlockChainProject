@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/list/list",
     "pages/newnote/newnote",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",

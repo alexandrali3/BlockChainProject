@@ -6,7 +6,7 @@ class Database
 {
     constructor()
     {
-        this.contractAddress = '0x33F025aCfBb2b2123A23ead83ace73884450EcAe';
+        this.contractAddress = '0x7bdfe0b795170586ce989ed8e08d25f104bfd583';
         this.gasPrice = '0xAB9ACA00';
         this.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cadf7874a8794c64bea89cb353f28d08"));
         this.abi = JSON.parse(fs.readFileSync("./NoteService_sol_NoteService.abi").toString());

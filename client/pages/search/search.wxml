@@ -1,0 +1,8 @@
+<view class='page'>
+    <view class='form-box'>
+      <form bindsubmit="submit">
+        <input class='title-input' placeholder="请输入标题" name="title" />
+        <button class='form-button' form-type="submit"> 查 询 </button>
+      </form>
+    </view>
+</view>
