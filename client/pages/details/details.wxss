@@ -31,3 +31,19 @@
   margin-top:20rpx;
   border-radius:6rpx;
 }
+
+.page_button{
+  width:98%;
+  margin-left:1%;
+  margin-top:30rpx;
+  background-color: blue;
+  color:white;
+  height:150rpx;
+  text-align: center;
+  line-height: 150rpx;
+  border-radius: 30rpx;  
+}
+
+.delete_note{
+  background-color: red;
+}

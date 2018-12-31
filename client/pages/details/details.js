@@ -45,6 +45,35 @@ Page({
 				})
 			}
 		})
-	}
+	},
+
+    deleteNoteBtnClick: function (e) {
+        var name = this.data.name;
+        var id = this.data.id;
+        app.showLoading(1000);
+        wx.request({
+            url: app.globalData.api + 'updateNote',
+            data: {
+                name: this.data.name,
+                content: null,
+                id: this.data.id
+            },
+            success: function (res) {
+                if (res.data) {
+                    wx.showModal({
+                        title: '提示',
+                        content: '删除成功！',
+                        success: function (res) {
+                            wx.redirectTo({
+                                url: '../index/index'
+                            })
+                        }
+                    })
+                } else {
+                    app.showModal('删除失败！')
+                }
+            }
+        })
+    }
 
 })

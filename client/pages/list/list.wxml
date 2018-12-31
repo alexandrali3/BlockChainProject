@@ -1,6 +1,0 @@
-<view class='page'>
-	<view wx:for="{{noteList}}" wx:key="{{index}}" class='list-item'>
-		<view class='list-name' data-sqlid="{{item.id}}" data-name="{{item.name}}" bindtap='noteitemClick'>{{item.name}}</view>
-		<view class='list-btn' data-code="{{item.code}}" data-index="{{index}}" bindtap='viewStateClick'>{{item.text}}</view>
-	</view>
-</view>

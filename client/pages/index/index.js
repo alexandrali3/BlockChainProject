@@ -32,8 +32,6 @@ Page({
           })
       } else if (this.data.canIUse) {
           console.log(2)
-          // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-          // 所以此处加入 callback 以防止这种情况
           app.userInfoReadyCallback = res => {
               console.log(12)
               app.globalData.userInfo = res.userInfo
@@ -44,22 +42,6 @@ Page({
           }
       } else {
           console.log(3)
-          // 在没有 open-type=getUserInfo 版本的兼容处理
-          wx.getUserInfo({
-              success: res => {
-                  app.globalData.userInfo = res.userInfo
-                  this.setData({
-                      userInfo: res.userInfo,
-                      hasUserInfo: true
-                  })
-              },
-              fail: res => {
-                  console.log(4);
-                  this.setData({
-                      getUserInfoFail: true
-                  })
-              }
-          })
       }
     },
     onShow: function () {
@@ -68,11 +50,6 @@ Page({
     login: function () {
         console.log(111)
         var that = this
-        // if (typeof success == "function") {
-        //   console.log(6);
-        //   console.log('success');
-        //   this.data.getUserInfoSuccess = success
-        // }
         wx.login({
             success: function (res) {
                 var code = res.code;

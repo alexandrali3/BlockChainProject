@@ -3,8 +3,7 @@ const app = getApp()
 Page({
   data: {
   },
-  //事件处理函数
-
+  
   addBtnClick: function () {//新增内容
     wx.navigateTo({
       url: '../logs/logs'

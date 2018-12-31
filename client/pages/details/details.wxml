@@ -3,7 +3,8 @@
       <form bindsubmit="submit">
         <input class='title-input' name="title" value='{{name}}'/>
         <textarea class='content-input' name="content"  value='{{content}}'/>
-        <button class='form-button' form-type="submit"> 修 改 </button>
+        <button class='page_button' form-type="submit"> 修 改 </button>
       </form>
     </view>
+    <button class='page_button delete_note' bindtap='deleteNoteBtnClick'> 删 除 </button>
 </view>

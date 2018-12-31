@@ -1,11 +1,13 @@
 pragma solidity ^0.4.22;
 
-contract CloudNoteService 
+contract NoteService 
 {
-    mapping(string => string) private note;
+    // Id to name.
     mapping(string => string[]) private idToName;
+    // Id and name to content.
     mapping(string => mapping(string => string)) private idNameToContent;
     
+    // Add Note.
     function addNote(string id, string name, string content) public {
         require(keccak256(id) != keccak256(""), "id不能为空 ");
         require(keccak256(name) != keccak256(""), "name不能为空 ");
@@ -16,6 +18,8 @@ contract CloudNoteService
         idNameToContent[id][name] = content;
 
     }
+    
+    // Update Note.
     function updateNote(string id, string name, string content) public {
         require(keccak256(id) != keccak256(""), "id不能为空 ");
         require(keccak256(name) != keccak256(""), "name不能为空 ");
@@ -24,10 +28,10 @@ contract CloudNoteService
         idNameToContent[id][name] = content;
     }
     
+    // Get Note by id and name.
     function getNote(string id, string name) view public returns(string) {
         return idNameToContent[id][name];
     }
-    
     
     function getNoteNumberById(string id) view public returns(uint) {
         return idToName[id].length;
